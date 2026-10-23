@@ -16,7 +16,7 @@ Enforces:
 - Missing data exported as "N/A", never 0.
 """
 from datetime import datetime, timezone
-from typing import Optional
+from typing import Optional, Tuple
 from fastapi import APIRouter, Depends, Query, Response, status
 from sqlalchemy.orm import Session
 
