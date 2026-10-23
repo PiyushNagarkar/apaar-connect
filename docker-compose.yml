@@ -1,0 +1,52 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: apaar_postgres
+    restart: always
+    environment:
+      POSTGRES_USER: aicte_user
+      POSTGRES_PASSWORD: aicte_password_secure
+      POSTGRES_DB: apaar_connect
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U aicte_user -d apaar_connect"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: apaar_backend
+    restart: always
+    environment:
+      - DATABASE_URL=postgresql://aicte_user:aicte_password_secure@db:5432/apaar_connect
+      - SECRET_KEY=aicte_apaar_connect_super_secret_jwt_key_2025_x99
+      - APAAR_ENCRYPTION_KEY=0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef
+      - APAAR_KEYED_HASH_SALT=aicte_blind_index_salt_keyed_hmac_sha256_v1
+      - CREDENTIAL_SIGNING_KEY=aicte_credential_signing_secret_key_ed25519_or_hmac_2025
+    ports:
+      - "8000:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: apaar_frontend
+    restart: always
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend
+
+volumes:
+  pgdata:

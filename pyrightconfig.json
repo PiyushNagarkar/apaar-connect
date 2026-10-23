@@ -1,0 +1,18 @@
+{
+  "include": [
+    ".",
+    "apaar-connect",
+    "apaar-connect/backend",
+    "backend",
+    "services",
+    "scripts"
+  ],
+  "extraPaths": [
+    ".",
+    "apaar-connect",
+    "apaar-connect/backend",
+    "backend"
+  ],
+  "pythonVersion": "3.11",
+  "reportMissingImports": "warning"
+}

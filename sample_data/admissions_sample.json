@@ -1,0 +1,40 @@
+{
+  "notice": "Synthetic data. Simulated APAAR service (MOCK_APAAR_V1).",
+  "batch_ref": "BATCH-2024-IITD-CSE-01",
+  "institution_code": "1-1001",
+  "academic_year": "2024-2025",
+  "programme": "ENGINEERING_AND_TECHNOLOGY",
+  "branch": "COMPUTER_SCIENCE_AND_ENGINEERING",
+  "records": [
+    {
+      "apaar_id": "987654321012",
+      "name": "Priya Patel",
+      "dob": "2005-03-21",
+      "gender": "FEMALE",
+      "seat_type": "REGULAR",
+      "category": "OPEN",
+      "round": "1",
+      "admission_date": "2024-07-15T10:30:00Z"
+    },
+    {
+      "apaar_id": "987654321013",
+      "name": "Rahul Sharma",
+      "dob": "2004-11-05",
+      "gender": "MALE",
+      "seat_type": "REGULAR",
+      "category": "OBC_NCL",
+      "round": "1",
+      "admission_date": "2024-07-15T11:00:00Z"
+    },
+    {
+      "apaar_id": "987654321014",
+      "name": "Ananya Iyer",
+      "dob": "2005-01-19",
+      "gender": "FEMALE",
+      "seat_type": "NRI",
+      "category": "OPEN",
+      "round": "1",
+      "admission_date": "2024-07-15T11:30:00Z"
+    }
+  ]
+}

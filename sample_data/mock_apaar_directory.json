@@ -1,0 +1,44 @@
+{
+  "adapter_metadata": {
+    "adapter_name": "MOCK_APAAR_V1",
+    "description": "Simulated APAAR registry adapter for hackathon prototype evaluation",
+    "disclaimer": "Synthetic data. Simulated APAAR service."
+  },
+  "mock_records": [
+    {
+      "apaar_id": "987654321012",
+      "name": "Priya Patel",
+      "dob": "2005-03-21",
+      "gender": "FEMALE",
+      "status": "ACTIVE"
+    },
+    {
+      "apaar_id": "987654321013",
+      "name": "Rahul Sharma",
+      "dob": "2004-11-05",
+      "gender": "MALE",
+      "status": "ACTIVE"
+    },
+    {
+      "apaar_id": "987654321014",
+      "name": "Ananya Iyer",
+      "dob": "2005-01-19",
+      "gender": "FEMALE",
+      "status": "ACTIVE"
+    },
+    {
+      "apaar_id": "987654321015",
+      "name": "Vikram Singh",
+      "dob": "2004-08-12",
+      "gender": "MALE",
+      "status": "ACTIVE"
+    },
+    {
+      "apaar_id": "987654321016",
+      "name": "Sneha Kulkarni",
+      "dob": "2005-06-30",
+      "gender": "FEMALE",
+      "status": "ACTIVE"
+    }
+  ]
+}
